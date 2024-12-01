@@ -1,13 +1,9 @@
 
-import { BrowserRouter } from "react-router-dom"
-import AllRoutes from "./routes/AllRoutes.routes.js"
+import AllRoutes from "./routes/AllRoutes.routes"
 function App() {
 
   return (
-    <BrowserRouter>
-  <AllRoutes/>
-  </BrowserRouter>
-    
+    <AllRoutes/>
   )
 }
 
