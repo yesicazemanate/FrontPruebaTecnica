@@ -21,12 +21,12 @@ const Sidbar = () => {
         </div>
         {open? ( 
             <><Link to="/add">
-        <div className='bg-blue-200 rounded-sm m-2 hover:bg-blue-400 mt-20'>
+        <div className='bg-blue-200 rounded-sm m-2 hover:bg-blue-400 mt-20 hover:text-white '>
             Agregar Contacto
         </div>
         </Link>
         <Link to="/list">
-        <div className='bg-blue-200 rounded-sm m-2 hover:bg-blue-400 mt-14'>
+        <div className='bg-blue-200 rounded-sm m-2 hover:bg-blue-400 hover:text-white mt-14 '>
             Ver Contactos
         </div>
         </Link></>):(<div></div>)}
