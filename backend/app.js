@@ -2,7 +2,7 @@
 import express from  "express"
 import cors from "cors"
 import dotenv from "dotenv"
-
+import { connectionDb } from "./src/config/db.js"
 dotenv.config()
 const app = express()
 app.use(express.json())
@@ -17,3 +17,10 @@ const corsOption={
 }
 // Habilitación de cors
 app.use(cors(corsOption))
+
+connectionDb()
+
+const port = process.env.PORT || 4000
+app.listen(port,()=>{
+    console.log(`working on the port ${port}`)
+})
