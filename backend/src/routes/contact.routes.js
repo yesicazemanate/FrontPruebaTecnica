@@ -5,8 +5,8 @@ const route = express.Router()
 route.post('/createcontact', createContact)
 route.get('/getcontacts',getContacts)
 route.get('/getcontact',getContact)
-route.delete('/deletecontact', deleteContact)
-route.patch('/updatecontact', pacthContact)
+route.delete('/deletecontact/:id', deleteContact)
+route.patch('/updatecontact/:id', pacthContact)
 
 
 export default route

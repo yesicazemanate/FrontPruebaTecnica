@@ -48,7 +48,7 @@ const getContact =async(req, res)=>{
     }
     const deleteContact=async(req, res)=>{
         try{
-            const {id}= req.headers
+            const {id}= req.params
             const Id= new ObjectId(id)
             const contact= await db.collection('contacts').deleteOne({_id:Id})
             if(!contact){
@@ -63,7 +63,7 @@ const getContact =async(req, res)=>{
     }
 const pacthContact=async(req, res)=>{
 try{
-    const {id}= req.headers
+    const {id}= req.params
     const {name,phone,email}=req.body
     const Id= new ObjectId(id)
     const contact={
