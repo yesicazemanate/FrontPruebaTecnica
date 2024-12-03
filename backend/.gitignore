@@ -1,0 +1,5 @@
+#directorios a ignorar 
+node_modules/
+
+#archivos sencibles
+.env

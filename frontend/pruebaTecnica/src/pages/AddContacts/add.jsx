@@ -5,7 +5,8 @@ const Add = () => {
     <Layout>
       <div className=''>
         <h1 className='text-5xl justify-center text-center'>FORMULARIO DE REGISTRO</h1>
-        <form className='flex flex-col m-4 p-9 border-2 rounded-sm'>
+        <form className='flex flex-col m-4 p-9 '>
+          <div className='border-2 rounded-sm'>
           <div className='m-4'>
           <label htmlFor=""> Nombre</label>
           <input 
@@ -24,7 +25,10 @@ const Add = () => {
           className='border-2 ml-3'
           type='email'/>
           </div>
-          <button className='bg-sky-500 text-lg text-white w-min rounded-sm p-2  ml-auto'>Guardar</button>
+          </div>
+          <div className=' flex justify-center m-3 p-3 items-center'>
+          <button className='bg-sky-500 text-lg text-white w-min rounded-sm p-2 '>Guardar</button>
+          </div>
         </form>
       </div>
     </Layout>

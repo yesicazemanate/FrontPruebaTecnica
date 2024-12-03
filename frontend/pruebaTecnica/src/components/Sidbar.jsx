@@ -7,7 +7,7 @@ const Sidbar = () => {
   return (
     <>
     <div className='flex'>
-     <div className={`bg-blue-200 top-0 left-0  h-screen m-2  rounded-md fixed  ${open ? 'w-1/4' :'w-1/12'}`}>
+     <div className={`bg-blue-200 top-0 left-0  h-screen m-2  rounded-md fixed transition-all ${open ? 'lg:w-1/4' :'w-1/12'} `}>
         
         <div 
          onClick={()=>{
@@ -19,7 +19,7 @@ const Sidbar = () => {
         />
        
         </div>
-        {open? ( 
+        {open&&  
             <><Link to="/add">
         <div className='bg-blue-200 rounded-sm m-2 hover:bg-blue-400 mt-20 hover:text-white '>
             Agregar Contacto
@@ -29,7 +29,7 @@ const Sidbar = () => {
         <div className='bg-blue-200 rounded-sm m-2 hover:bg-blue-400 hover:text-white mt-14 '>
             Ver Contactos
         </div>
-        </Link></>):(<div></div>)}
+        </Link></>}
       
       
         </div>
