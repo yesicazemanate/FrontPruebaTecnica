@@ -1,5 +1,6 @@
 // importación dependencias necesarias 
-import express from  "express"
+import express from 'express';
+import routes from "./src/routes/index.js"
 import cors from "cors"
 import dotenv from "dotenv"
 import { connectionDb } from "./src/config/db.js"
@@ -17,7 +18,7 @@ const corsOption={
 }
 // Habilitación de cors
 app.use(cors(corsOption))
-
+app.use('/', routes)
 connectionDb()
 
 const port = process.env.PORT || 4000
