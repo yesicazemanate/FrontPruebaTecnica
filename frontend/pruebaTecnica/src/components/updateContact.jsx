@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Layout from '../layouts/layouts'
-import { Formulario } from './formulario'
+import { Formulario } from './form'
 import axios from 'axios'
 import { contextAdd } from '../context/formAdd'
 import { useParams } from 'react-router-dom'

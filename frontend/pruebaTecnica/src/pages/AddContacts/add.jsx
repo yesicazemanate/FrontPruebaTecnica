@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { Formulario } from '../../components/formulario'
+import { Formulario } from '../../components/form'
 import Layout from '../../layouts/layouts'
 import axios from 'axios'
 
@@ -37,7 +37,7 @@ const onState=()=>{
   return (
     <Layout>
       <div className=''>
-        <h1 className='text-5xl justify-center text-center'>FORMULARIO DE REGISTRO</h1>
+        <h1 className='text-5xl justify-center text-center'>FORMULARIO DE REGISTRO DE CONTACTO</h1>
       <Formulario 
       name={name} 
       setName={setName}
