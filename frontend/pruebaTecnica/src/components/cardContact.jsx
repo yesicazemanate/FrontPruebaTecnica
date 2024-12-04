@@ -1,10 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import editar from '../assets/editar-texto.png'
 import eliminar from '../assets/basura.png'
 import ModalDelete from './modalDelete'
+import {contextAdd} from '../context/formAdd'
+import { Link } from 'react-router-dom'
 const CardContact = ({name, phone, email,id}) => {
   const [deleteConfir, setDeleteConfir]= useState(false)
- 
+  const {state,setState}=useContext(contextAdd)
+ const stateAdd=()=>{
+  setState(false)
+ }
   return (
     <>
     <div className='flex border-2 w-3/4 m-2'>
@@ -15,7 +20,9 @@ const CardContact = ({name, phone, email,id}) => {
       <div>{email}</div>
       </div>
       <div className=' ml-auto m-3 items-center'>
-        <img src={editar} alt=""  className='w-6 h-6 '/>
+        <Link to={`/edit/${id}`}>
+        <img src={editar} alt=""  className='w-6 h-6 ' onClick={stateAdd}/>
+        </Link>
         <img src={eliminar} className='w-6 h-6' onClick={()=>setDeleteConfir(true)}/>
       </div>
      

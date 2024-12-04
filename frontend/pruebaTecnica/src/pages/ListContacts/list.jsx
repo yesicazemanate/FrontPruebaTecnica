@@ -26,18 +26,20 @@ const list = () => {
 getContact()
   },[])
 const searchS=async(e)=>{
-setSearch(e.target.value)
+  const value = e.target.value.trim().toLowerCase()
+  setSearch(value);
 
-if(search.length < 2){
+if(value.length <2){
   getContact()
-}else if(search.length >=2){
+}else if(value.length >2 || value.length ==3 ) {
   const filteredData = data.filter((datas) =>
-    datas.name.toLowerCase().includes(search.toLowerCase()) 
+    datas.name.toLowerCase().includes(search) ||
+  datas.phone.toString().toLowerCase().includes(search)
   );
   setData(filteredData)
 }
 }
-console.log(search)
+//console.log(search)
   return (
     <Layout>
     <div className=' '>

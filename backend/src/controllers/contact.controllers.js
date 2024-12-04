@@ -66,12 +66,13 @@ try{
     const {id}= req.params
     const {name,phone,email}=req.body
     const Id= new ObjectId(id)
-    const contact={
-        name,
-        phone,
-        email
-    }
-    const updateContact= await db.collection('contacts').updateOne({_id:Id},{$set:contact})
+    const updateData = {};
+    if (name) updateData.name = name;
+    if (phone) updateData.phone = phone;
+    if (email) updateData.email = email;
+
+
+    const updateContact= await db.collection('contacts').updateOne({_id:Id},{$set:updateData})
     if(!updateContact){
         return res.status(400).send('Nose actualizo el contacto no existe')
     }
