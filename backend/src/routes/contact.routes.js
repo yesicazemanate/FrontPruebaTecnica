@@ -4,7 +4,7 @@ const route = express.Router()
 
 route.post('/createcontact', createContact)
 route.get('/getcontacts',getContacts)
-route.get('/getcontact',getContact)
+route.get('/getcontact/:id',getContact)
 route.delete('/deletecontact/:id', deleteContact)
 route.patch('/updatecontact/:id', pacthContact)
 

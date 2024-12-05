@@ -33,7 +33,7 @@ return res.status(200).json(contacts)
 const getContact =async(req, res)=>{
 
     try{
-        const {id}= req.headers
+        const {id}= req.params
         const Id= new ObjectId(id)
 
     const contact = await db.collection('contacts').findOne({_id:Id})
